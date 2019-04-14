@@ -1,6 +1,5 @@
 package com.company.Task_3;
 
-
 /*
 TASK NR 3 - DESCRIPTION:
 Using conditional operator, write a program that reads three integers and prints the largest.
@@ -11,22 +10,24 @@ public class TheLargestNumber {
 
     public static void main(String[] args) {
 
-        theLargestInteger1(-1, 0, 0);
-        theLargestInteger2(-1, 0, 0);
+        theLargestIntegerBasic(-1, 5, 0);
+        theLargestIntegerMath_max(-1, 5, 0);
 
     }
 
 
-    public static void theLargestInteger2(int first, int second, int third) {
+    // Math.max version
+    public static void theLargestIntegerMath_max(int first, int second, int third) {
 
-        int one1 = Math.max(first, second), one2 = Math.max(first, third);
-        int result = Math.max(one1, one2);
+        int compare = Math.max(first, second);
+        int result = Math.max(compare, third);
         System.out.println("The largest number is: " + result);
 
     }
 
 
-    public static void theLargestInteger1(int first, int second, int third) {
+    //Basic version
+    public static void theLargestIntegerBasic(int first, int second, int third) {
 
         if (first == 0 && second == 0 && third == 0) {
             System.out.println("The largest number is: " + 0);
