@@ -8,16 +8,21 @@ public class IntegerToOtherFormats {
 
     public static void main(String[] args) {
 
-        System.out.println(Integer.toString(100,8));
-        System.out.println(Integer.toString(100,2));
-        System.out.println(Integer.toString(100,16));
+        formatConvertor(100);
 
-        Integer i = 100;
-        String binary = Integer.toBinaryString(i);
-        System.out.println("Binary Value = " + binary);
+    }
+    
 
-        int x = 100;
-        System.out.println(Integer.toBinaryString(x));
+    public static void formatConvertor(int num) {
+
+        String binary = Integer.toBinaryString(num);
+        String octal = Integer.toOctalString(num);
+        String hexadecimal = Integer.toHexString(num);
+
+        System.out.println("The value of the decimal number is " + num + "\n" +
+                "Binary value = " + binary + "\n" +
+                "Octal Value = " + octal + "\n" +
+                "Hexadecimal Value = " + hexadecimal);
 
     }
 
