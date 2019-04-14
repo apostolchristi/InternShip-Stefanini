@@ -27,16 +27,14 @@ public class PointMutators {
 
 
     public PointMutators translate(double x, double y) {
-        setX(this.x + x);
-        setY(this.y + y);
-        return this;
+
+        return new PointMutators(getX() + x, getY() + y);
     }
 
 
     public PointMutators scale(double scale) {
-        setX(this.x * scale);
-        setY (this.y *scale);
-        return this;
+
+        return new PointMutators(getX() * scale, getY() * scale);
     }
 
 
@@ -49,11 +47,5 @@ public class PointMutators {
         return y;
     }
 
-    private void setX(double x) {
-        this.x = x;
-    }
 
-    private void setY(double y) {
-        this.y = y;
-    }
 }
