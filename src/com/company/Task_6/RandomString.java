@@ -12,15 +12,15 @@ public class RandomString {
 
     public static void main(String[] args) {
 
-        System.out.println(randomString());
+        System.out.println("The random long value in base 36 is: \n" + randomString());
 
     }
 
 
     public static String randomString() {
-        Random random = new Random();
-        String str = Long.toString(random.nextLong(), 36);
-        return str;
+
+        return Long.toUnsignedString(new Random().nextLong(), 36);
+
     }
 
 }
