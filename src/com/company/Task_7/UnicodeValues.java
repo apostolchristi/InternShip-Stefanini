@@ -10,7 +10,7 @@ public class UnicodeValues {
 
     public static void main(String[] args) {
 
-        methodASCII("sortDirectory");
+        methodASCII("aaăăфф");
 
     }
 
@@ -20,17 +20,13 @@ public class UnicodeValues {
         char[] toChar = text.toCharArray();
 
         for (char c : toChar) {
-            if ((int)c > 0 && (int)c < 127) {
-                System.out.println("This IS ASCII symbol: " + c + " = " + (int)c);
-            } else if ((int)c > 128 && (int) c < 255) {
-                System.out.println("These IS Extended ASCII symbol: " + c + " = " + (int)c);
-            } else {
-                System.out.println("These is NOT ASCII symbol: " + c + " = " + (int)c);
+            int value = (int) c;
+            if (value > 255) {
+                System.out.println("This is NOT ASCII symbol: " + c + " = " + (int) c);
             }
         }
     }
-
-
 }
+
 
 
