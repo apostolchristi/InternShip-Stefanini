@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.Comparator;
 
-
 /*
 TASK NR 13 - DESCRIPTION:
 Given an array of File objects, sort it so that directories come before files, and within each group,
@@ -24,4 +23,5 @@ public class LambdaExpression {
         Arrays.toString(files);
 
     }
+    
 }

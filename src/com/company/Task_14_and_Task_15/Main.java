@@ -12,6 +12,6 @@ an accessor method getLabel.
 public class Main {
 
     public static void main(String[] args) {
-        
+
     }
 }
