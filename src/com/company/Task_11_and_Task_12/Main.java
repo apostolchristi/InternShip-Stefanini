@@ -15,38 +15,44 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Employee one = new Employee("Jorsh",5000);
+        Employee one = new Employee("Jorsh", 5000);
         Employee two = new Employee("Andrey", 4000);
         Employee three = new Employee("Carl", 2000);
 
         Measurable[] objects = {one, two, three};
-        //Average method Task_11_and_Task_12
-        System.out.println(average(objects));
-        //Largest method Task_13
-        System.out.println(largest(objects));
+
+        System.out.println("The average salary is: " + average(objects));
+
+        System.out.println("Employee with the largest salary is: " + ((Employee)largest(objects)).getName()+
+                " with " + ((Employee)largest(objects)).getSalary() + " salary");
+
+
 
     }
 
     public static double average(Measurable[] objects) {
 
         double sum = 0;
-        for(int i=0; i<objects.length; i++) {
+        for (int i = 0; i < objects.length; i++) {
             sum += objects[i].getMeasure();
         }
-        return (double) sum / (double) objects.length;
+        return sum / (double) objects.length;
     }
 
 
-    public static Measurable largest( Measurable[] objects) {
+    public static Measurable largest(Measurable[] objects) {
 
-        double max = objects[0].getMeasure();
-        Measurable largest = null;
-        for(Measurable test : objects) {
-            if(max <= test.getMeasure()) {
-                max = test.getMeasure();
-                largest = test;
+        Measurable max = objects[0];
+        for (Measurable measurable : objects) {
+            if (max.getMeasure() <= measurable.getMeasure()) {
+                max = measurable;
             }
         }
-        return largest;
+        return max;
+
     }
+
+
 }
+
+

@@ -24,12 +24,6 @@ public class Employee implements Measurable{
     }
 
 
-    @Override
-    public String toString() {
-        return "Name of Employee with the largest sallary is: " + this.getName()
-               + " with salary: "+ this.getSalary();
-    }
-
 
     public String getName() {
         return name;
