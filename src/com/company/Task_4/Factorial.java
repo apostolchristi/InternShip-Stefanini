@@ -10,22 +10,7 @@ public class Factorial {
 
     public static void main(String[] args) {
 
-        System.out.println(factorialBigInteger(5));
-        System.out.println(factorialBasic(5));
-
-    }
-
-
-    public static int factorialBasic(int num) {
-
-        if(num < 0) {
-            return 1;
-        }
-        int result = 1;
-        for(int i=1; i<=num; i++) {
-            result *= i;
-        }
-        return result;
+        System.out.println(factorialBigInteger(200));
 
     }
 
