@@ -7,8 +7,6 @@ Write a program that swap the content of two IntHolderClass.
 
 import org.omg.CORBA.IntHolder;
 
-import javax.xml.ws.Holder;
-
 public class IntHolderClass {
 
     public static void main(String[] args) {
@@ -24,8 +22,8 @@ public class IntHolderClass {
         first.value = second.value;
         second.value = temp;
 
-        System.out.println(" This is first " + first.value);
-        System.out.println(" This is first " + second.value);
+        System.out.println("This is first value: " + first.value);
+        System.out.println("This is second value: " + second.value);
 
 
     }
