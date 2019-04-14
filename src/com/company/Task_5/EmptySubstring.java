@@ -9,12 +9,13 @@ public class EmptySubstring {
 
     public static void main(String[] args) {
 
-        displayAllCombinations("Test");
+        displayAllCombinations("Test ser");
 
     }
 
 
     private static void displayAllCombinations(String str) {
+
         for (int end = str.length(); end > 0; end--) {
             for (int start = 0; start < end; start++) {
                 String result = str.substring(start, end);
