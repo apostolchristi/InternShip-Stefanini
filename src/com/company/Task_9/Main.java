@@ -5,8 +5,8 @@ public class Main {
     public static void main(String[] args) {
 
         Point p = new Point(2,3).translate(2,3).scale(0.5);
-        System.out.println(p.getX());
-        System.out.println(p.getY());
+        System.out.println("new x is: " + p.getX());
+        System.out.println("new y is: " + p.getY());
 
     }
 
