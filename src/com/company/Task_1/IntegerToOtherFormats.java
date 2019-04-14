@@ -11,7 +11,7 @@ public class IntegerToOtherFormats {
         formatConvertor(100);
 
     }
-    
+
 
     public static void formatConvertor(int num) {
 

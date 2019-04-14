@@ -10,49 +10,31 @@ public class IntegerNormalizes {
 
     public static void main(String[] args) {
 
-        System.out.println(normalizingAngle1(-2000));
-        System.out.println(normalizingAngle2(-2000));
-        System.out.println(normalizingAngle3(-2000));
+        int num = 0;
+        System.out.println(normalizingAngleModulus(num));
+        System.out.println(normalizingAngleMath_floorMood(num));
 
     }
 
+    //Math.floorMod version
+    public static int normalizingAngleMath_floorMood(int angle) {
 
-    public static int normalizingAngle3(int angle) {
-
-        angle = Math.floorMod(angle, 359);
-        return angle;
+        return Math.floorMod(angle, 360);
 
     }
 
+    //Modulus(%) version
+    public static int normalizingAngleModulus(int angle) {
 
-    public static int normalizingAngle2(int angle) {
+        int i360 = 360;
 
         //reduce the angle
-        angle = angle % 359;
+        angle = angle % i360;
 
         //positive reminder
-        angle = (angle + 359) % 359;
-
-        //negative reminder
-        if(angle > 180) {
-            angle -= 359;
-        }
+        angle = (angle + i360) % i360;
 
         return angle;
-
-    }
-
-
-    public static int normalizingAngle1(int angle) {
-
-        int newAngle = angle;
-        while(newAngle <= -180) {
-            newAngle += 359;
-        }
-        while (newAngle > 180) {
-            newAngle -= 359;
-        }
-        return newAngle;
 
     }
 
