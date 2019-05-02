@@ -23,5 +23,5 @@ public class LambdaExpression {
         Arrays.toString(files);
 
     }
-    
+
 }
