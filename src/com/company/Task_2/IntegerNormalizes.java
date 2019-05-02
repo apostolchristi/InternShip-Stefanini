@@ -8,23 +8,15 @@ TASK NR 2 - DESCRIPTION:
 
 public class IntegerNormalizes {
 
-    public static void main(String[] args) {
-
-        int num = 0;
-        System.out.println(normalizingAngleModulus(num));
-        System.out.println(normalizingAngleMath_floorMood(num));
-
-    }
-
     //Math.floorMod version
-    public static int normalizingAngleMath_floorMood(int angle) {
+    public int normalizingAngleMath_floorMood(int angle) {
 
         return Math.floorMod(angle, 360);
-
     }
 
+
     //Modulus(%) version
-    public static int normalizingAngleModulus(int angle) {
+    public int normalizingAngleModulus(int angle) {
 
         int i360 = 360;
 
@@ -35,9 +27,16 @@ public class IntegerNormalizes {
         angle = (angle + i360) % i360;
 
         return angle;
-
     }
 
+
+    public static void main(String[] args) {
+        IntegerNormalizes referenceTask2 = new IntegerNormalizes();
+        int num = -1;
+        System.out.println(referenceTask2.normalizingAngleModulus(num));
+        System.out.println(referenceTask2.normalizingAngleMath_floorMood(num));
+
+    }
 
 }
 
