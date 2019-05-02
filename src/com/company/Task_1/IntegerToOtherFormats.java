@@ -6,25 +6,28 @@ Write a program that reads an integer and prints it in binary, octal and hexadec
 */
 public class IntegerToOtherFormats {
 
+    public static String convertToBinary(int num) {
+
+        return Integer.toString(num, 2);
+    }
+
+    public void convertToOctal(int num) {
+        String octal = Integer.toBinaryString(num);
+        System.out.println( "Octal Value = " + octal);
+    }
+
+    public void convertToHexadecimal(int num) {
+        String hexadecimal = Integer.toBinaryString(num);
+        System.out.println("Hexadecimal Value = " + hexadecimal);
+    }
+
+
     public static void main(String[] args) {
 
-        formatConvertor(100);
-
     }
 
 
-    public static void formatConvertor(int num) {
 
-        String binary = Integer.toBinaryString(num);
-        String octal = Integer.toOctalString(num);
-        String hexadecimal = Integer.toHexString(num);
-
-        System.out.println("The value of the decimal number is " + num + "\n" +
-                "Binary value = " + binary + "\n" +
-                "Octal Value = " + octal + "\n" +
-                "Hexadecimal Value = " + hexadecimal);
-
-    }
 
 
 }
